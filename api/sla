@@ -1,0 +1,112 @@
+Estou com uma API em Node.js em express, utilizando sequelizerc, nodemon, bcrypt, jwtoken.
+Preciso alterar ela para php, poderia me ajudar?
+começando pela arquitetura
+ela está assim:
+/src
+    /app
+        /controllers
+            Admins.controller.js
+            Auth.controller.js
+            Categories.controller.js
+            Clients.controller.js
+            Orders.controller.js
+            Products.controller.js
+
+
+        /errors
+            admin.errors.js
+            AppError.js
+            auth.errors.js
+            category.errors.js
+            client.errors.js
+            order.errors.js
+            product.errors.js
+
+        /middlewares
+            isAdminAuthenticated.js
+            isAuthenticated.js
+            isClientAuthenticated.js
+
+        /models
+            Admins.js
+            Categories.js
+            Clients.js
+            index.js
+            Orders.js
+            Products.js
+
+        /routes
+            Admin.routes.js
+            Auth.routes.js
+            Category.routes.js
+            Client.routes.js
+            Order.routes.js
+            Product.routes.js
+            routes.js
+
+        /schemas/User
+            Constraints.js
+            EditConstraints.js
+            User.schemas.js
+
+        /services
+            Admins.service.js
+            Categories.service.js
+            Clients.service.js
+            Orders.service.
+            Products.service.js
+
+    /config
+        database.js
+
+    /database
+        index.js
+
+    /utils
+        /seeders
+            adminSeeder.js
+
+        app.js
+        server.js
+.env
+.gitignore
+.sequelizerc
+nodemon.json
+package.json
+
+esse é o package.json
+{
+    "name": "ymx",
+    "version": "1.0.0",
+    "description": "API usuários intuit",
+    "main": "index.js",
+    "scripts": {
+      "start": "node src/utils/server.js && npx sequelize-cli db:seed:all",
+      "dev": "nodemon src/utils/server.js --exec 'node src/utils/server.js'",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Gabriel",
+    "license": "ISC",
+    "dependencies": {
+      "bcrypt": "^5.1.1",
+      "body-parser": "^1.20.2",
+      "compression": "^1.7.4",
+      "cors": "^2.8.5",
+      "dotenv": "^16.4.5",
+      "express": "^4.19.2",
+      "jsonwebtoken": "^9.0.2",
+      "mysql2": "^3.11.0",
+      "nodemailer": "^6.9.13",
+      "pg": "^8.11.5",
+      "sequelize": "^6.37.3",
+      "validate.js": "^0.13.1",
+      "ymx": "file:"
+    },
+    "devDependencies": {
+      "nodemon": "^3.1.0",
+      "sequelize-cli": "^6.6.2",
+      "sucrase": "^3.35.0"
+    }
+  }
+  
